@@ -18,7 +18,7 @@ void push_m(stack_t **stack, unsigned int __attribute__((unused))line_number)
 
 	temp = malloc(sizeof(stack_t));
 	if (temp == NULL)
-		exit(0);
+		exit(EXIT_FAILURE);
 
 	if (head == NULL)
 	{

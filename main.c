@@ -110,8 +110,16 @@ int main(int argc, char **argv)
 		{
 			pall_m(&stack, line_number);
 		}
+		else if (comparator(opcode, "pint"))
+		{
+			pint_m(&stack, line_number);
+		}
+		else if (comparator(opcode, "pop"))
+		{
+			pop_m(&stack, line_number);
+		}
 		line_number++;
 	}
-
+	free(line);
 	exit(EXIT_SUCCESS);
 }

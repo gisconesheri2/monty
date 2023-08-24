@@ -36,6 +36,8 @@ typedef struct instruction_s
 
 void push_m(stack_t **stack, unsigned int line_number);
 void pall_m(stack_t **stack, unsigned int line_number);
+void pint_m(stack_t **stack, unsigned int line_number);
+void pop_m(stack_t **stack, unsigned int line_number);
 /*instruction_t pushmonty = {"push", push_m};*/
 
 extern int data;
