@@ -124,6 +124,14 @@ int main(int argc, char **argv)
 		{
 			swap_m(&stack, line_number);
 		}
+		else if (comparator(opcode, "add"))
+		{
+			add_m(&stack, line_number);
+		}
+		else if (comparator(opcode, "nop"))
+		{
+			continue;
+		}
 		else
 		{
 			dprintf(2, "L%u: unknown instruction %s\n", line_number, opcode);

@@ -39,6 +39,7 @@ void pall_m(stack_t **stack, unsigned int line_number);
 void pint_m(stack_t **stack, unsigned int line_number);
 void pop_m(stack_t **stack, unsigned int line_number);
 void swap_m(stack_t **stack, unsigned int line_number);
+void add_m(stack_t **stack, unsigned int line_number);
 instruction_t pushmonty;
 instruction_t pintmonty;
 
