@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
  * push_m - add a new item on to the top a stack
- * @stack: the topmost item on the stack
+ * @stack: the topmost item on the stack:
  * @line_number: the line from the .m file that is being executed
  * Return: Nothing
  */
@@ -18,7 +18,10 @@ void push_m(stack_t **stack, unsigned int __attribute__((unused))line_number)
 
 	temp = malloc(sizeof(stack_t));
 	if (temp == NULL)
+	{
+		dprintf(2, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
+	}
 
 	if (head == NULL)
 	{

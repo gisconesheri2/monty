@@ -120,6 +120,11 @@ int main(int argc, char **argv)
 		{
 			pop_m(&stack, line_number);
 		}
+		else
+		{
+			dprintf(2, "L%u: unknown instruction %s\n", line_number, opcode);
+			exit(EXIT_FAILURE);
+		}
 		line_number++;
 	}
 	free(line);
