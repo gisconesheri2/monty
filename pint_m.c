@@ -12,7 +12,7 @@ void pint_m(stack_t **stack, unsigned int __attribute__((unused))line_number)
 
 	if (temp == NULL)
 	{
-		dprintf(2, "L%u: can't pint, stck empty\n", line_number);
+		dprintf(2, "L%u: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
