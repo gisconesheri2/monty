@@ -2,6 +2,7 @@
 
 int data = 0;
 int true_zero = 0;
+instruction_t pushmonty = {"push", push_m};
 /**
  * comparator - compares word and string in compare to
  * @word: word to compare
@@ -77,6 +78,7 @@ int main(int argc, char **argv)
 	FILE *open_file;
 	char *mfileargs[2];
 	stack_t *stack = NULL;
+	instruction_t pintmonty = {"pint", pint_m};
 	unsigned int line_number = 1;
 
 	if (argc != 2)
@@ -103,7 +105,7 @@ int main(int argc, char **argv)
 			if (comparator(arg, "0"))
 				true_zero = 1;
 			data = atoi(arg);
-			push_m(&stack, line_number);
+			pushmonty.f(&stack, line_number);
 			true_zero = 0;
 		}
 		else if (comparator(opcode, "pall"))
@@ -112,7 +114,7 @@ int main(int argc, char **argv)
 		}
 		else if (comparator(opcode, "pint"))
 		{
-			pint_m(&stack, line_number);
+			pintmonty.f(&stack, line_number);
 		}
 		else if (comparator(opcode, "pop"))
 		{

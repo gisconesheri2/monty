@@ -38,7 +38,8 @@ void push_m(stack_t **stack, unsigned int line_number);
 void pall_m(stack_t **stack, unsigned int line_number);
 void pint_m(stack_t **stack, unsigned int line_number);
 void pop_m(stack_t **stack, unsigned int line_number);
-/*instruction_t pushmonty = {"push", push_m};*/
+instruction_t pushmonty;
+instruction_t pintmonty;
 
 extern int data;
 extern int true_zero;
