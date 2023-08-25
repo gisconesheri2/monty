@@ -22,7 +22,7 @@ void swap_m(stack_t **stack, unsigned int line_number)
 
 	if (item_bottom == NULL)
 	{
-		dprintf(2, "L%u: can't swap, stack to short\n", line_number);
+		dprintf(2, "L%u: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
