@@ -10,7 +10,7 @@ void push_m(stack_t **stack, unsigned int __attribute__((unused))line_number)
 	stack_t *head = *stack;
 	stack_t *temp;
 
-	if (data == 0 && true_zero == 0)
+	if (perform_push == 0)
 	{
 		dprintf(2, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);

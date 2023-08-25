@@ -1,7 +1,7 @@
 #include "monty.h"
 
 int data = 0;
-int true_zero = 0;
+int perform_push = 0;
 instruction_t pushmonty = {"push", push_m};
 /**
  * comparator - compares word and string in compare to
@@ -47,14 +47,17 @@ void split_string(char *line, char **mlineargs)
 		temp[strlen(temp) - 1] = '\0';
 	opcode = temp;
 
-	if (opcode[0] == '\n')
+	if (strlen(opcode) == 0)
 		opcode = NULL;
 	same = comparator(opcode, "push");
 	if (same == 1)
 	{
 		temp = strtok(NULL, " ");
-		if (temp[strlen(temp) - 1] == '\n')
-			temp[strlen(temp) - 1] = '\0';
+		if (temp != NULL)
+		{
+			if (temp[strlen(temp) - 1] == '\n')
+				temp[strlen(temp) - 1] = '\0';
+		}
 		mlineargs[1] = temp;
 	}
 	else
@@ -99,14 +102,21 @@ int main(int argc, char **argv)
 		opcode = mfileargs[0];
 		arg = mfileargs[1];
 		if (opcode == NULL)
+		{
+			line_number++;
 			continue;
+		}
 		if (comparator(opcode, "push"))
 		{
-			if (comparator(arg, "0"))
-				true_zero = 1;
-			data = atoi(arg);
+			if (comparator(arg, "0") || comparator(arg, "-0"))
+				perform_push = 1;
+			if (has_only_nums(arg))
+				perform_push = 1;
+			if (arg != NULL)
+				data = atoi(arg);
 			pushmonty.f(&stack, line_number);
-			true_zero = 0;
+			perform_push = 0;
+			data = 0;
 		}
 		else if (comparator(opcode, "pall"))
 		{
@@ -130,6 +140,7 @@ int main(int argc, char **argv)
 		}
 		else if (comparator(opcode, "nop"))
 		{
+			line_number++;
 			continue;
 		}
 		else
@@ -140,5 +151,7 @@ int main(int argc, char **argv)
 		line_number++;
 	}
 	free(line);
+	fclose(open_file);
+	free_stack(stack);
 	exit(EXIT_SUCCESS);
 }

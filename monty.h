@@ -40,9 +40,11 @@ void pint_m(stack_t **stack, unsigned int line_number);
 void pop_m(stack_t **stack, unsigned int line_number);
 void swap_m(stack_t **stack, unsigned int line_number);
 void add_m(stack_t **stack, unsigned int line_number);
+void free_stack(stack_t *stack);
+int has_only_nums(char *word);
 instruction_t pushmonty;
 instruction_t pintmonty;
 
 extern int data;
-extern int true_zero;
+extern int perform_push;
 #endif

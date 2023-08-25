@@ -10,9 +10,6 @@ void pall_m(stack_t **stack, unsigned int __attribute__((unused))line_number)
 {
 	stack_t *temp = *stack;
 
-	if (temp == NULL)
-		exit(0);
-
 	while (temp != NULL)
 	{
 		printf("%d\n", temp->n);

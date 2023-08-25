@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * pop_m - add a new item on to the top a stack
+ * pop_m - remove the topmost item on to the top a stack
  * @stack: the topmost item on the stack
  * @line_number: the line from the .m file that is being executed
  * Return: Nothing
