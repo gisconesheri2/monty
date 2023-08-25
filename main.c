@@ -119,25 +119,23 @@ int main(int argc, char **argv)
 			data = 0;
 		}
 		else if (comparator(opcode, "pall"))
-		{
 			pall_m(&stack, line_number);
-		}
 		else if (comparator(opcode, "pint"))
-		{
 			pintmonty.f(&stack, line_number);
-		}
 		else if (comparator(opcode, "pop"))
-		{
 			pop_m(&stack, line_number);
-		}
 		else if (comparator(opcode, "swap"))
-		{
 			swap_m(&stack, line_number);
-		}
 		else if (comparator(opcode, "add"))
-		{
 			add_m(&stack, line_number);
-		}
+		else if (comparator(opcode, "sub"))
+			sub_m(&stack, line_number);
+		else if (comparator(opcode, "div"))
+			div_m(&stack, line_number);
+		else if (comparator(opcode, "mul"))
+			mul_m(&stack, line_number);
+		else if (comparator(opcode, "mod"))
+			mod_m(&stack, line_number);
 		else if (comparator(opcode, "nop"))
 		{
 			line_number++;

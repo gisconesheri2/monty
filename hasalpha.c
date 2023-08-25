@@ -8,6 +8,7 @@
 int has_only_nums(char *word)
 {
 	int i, hon, num;
+
 	i = hon = 0;
 	num = 48;
 	if (word == NULL)

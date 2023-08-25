@@ -1,8 +1,7 @@
 #include "monty.h"
 /**
- * pop_m - remove the topmost item on to the top a stack
+ * free_stack - remove the topmost item on to the top a stack
  * @stack: the topmost item on the stack
- * @line_number: the line from the .m file that is being executed
  * Return: Nothing
  */
 void free_stack(stack_t *stack)
