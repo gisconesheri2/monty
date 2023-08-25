@@ -136,6 +136,8 @@ int main(int argc, char **argv)
 			mul_m(&stack, line_number);
 		else if (comparator(opcode, "mod"))
 			mod_m(&stack, line_number);
+		else if (comparator(opcode, "pchar"))
+			pchar_m(&stack, line_number);
 		else if (comparator(opcode, "nop"))
 		{
 			line_number++;

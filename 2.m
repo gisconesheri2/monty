@@ -1,6 +1,6 @@
 push 1
 push 2
 push 10
-push 3
-mod
+push -3
+pchar
 pall

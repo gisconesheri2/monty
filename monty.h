@@ -44,6 +44,7 @@ void sub_m(stack_t **stack, unsigned int line_number);
 void div_m(stack_t **stack, unsigned int line_number);
 void mul_m(stack_t **stack, unsigned int line_number);
 void mod_m(stack_t **stack, unsigned int line_number);
+void pchar_m(stack_t **stack, unsigned int line_number);
 void free_stack(stack_t *stack);
 int has_only_nums(char *word);
 instruction_t pushmonty;
