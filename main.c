@@ -143,6 +143,11 @@ int main(int argc, char **argv)
 			line_number++;
 			continue;
 		}
+		else if (opcode[0] == '#')
+		{
+			line_number++;
+			continue;
+		}
 		else
 		{
 			dprintf(2, "L%u: unknown instruction %s\n", line_number, opcode);
